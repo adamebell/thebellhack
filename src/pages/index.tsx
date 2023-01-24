@@ -23,7 +23,7 @@ export default function HomePage() {
       <Seo />
 
       <main>
-        <section className='bg-white'>
+        <section className='bg-dark text-white'>
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
           <NextImage
                   useSkeleton
@@ -36,7 +36,7 @@ export default function HomePage() {
             <h1 className='mt-4'>
               The Bell Hack Beta SRD
             </h1>
-            <p className='mt-2 text-sm w-3/5 text-gray-800'>
+            <p className='mt-2 text-sm w-3/5'>
               This is a beta ruleset for your new favorite fantasy adventure RPG. 
               The game is playable as-is, but I'll be developing the rules, content, 
               and setting as my playtesting continues. Check out the {' '}
@@ -56,6 +56,9 @@ export default function HomePage() {
               <ButtonLink className='mt-6' href='/setting' variant='light'>
                 Setting
               </ButtonLink>
+              <ButtonLink className='mt-6' href='/character-roles' variant='light'>
+                Character Roles
+              </ButtonLink>
             </div>
             <div className=' flex flex-wrap gap-2'>
               <ButtonLink className='mt-2' href='/initiative' variant='light'>
@@ -71,7 +74,7 @@ export default function HomePage() {
                 Play Materials
               </ButtonLink>
             </div>
-            <footer className='absolute bottom-2 text-gray-700'>
+            <footer className='absolute bottom-2 text-white'>
               © {new Date().getFullYear()} By{' '}
               <UnderlineLink href='https://adamebell.games'>
                 Adam Bell
