@@ -2,12 +2,12 @@ import * as React from 'react';
 
 import { getSheetData } from '@/lib/sheets';
 
+import ItemCardHover from '@/components/ItemCardHover'
 import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
 import Seo from '@/components/Seo';
-import ItemCard from '@/components/ItemCard'
 
-export default function SheetsPage({ data }) {
+export default function SheetsPage({ data, itemData }) {
   return (
     <Layout>
       <Seo
@@ -30,9 +30,8 @@ export default function SheetsPage({ data }) {
 
             <div className='mt-8 space-y-6 w-3/4 grid-flow-col'>
               {data && data.length ? (
-                data.map((item) => (
+                data.filter(row => row[0]==1).map((item) => (
                   <div key={item}>
-                    {item[0]==1 && 
                     <div className="flex justify-center">
                       <div className="block rounded-lg shadow-lg bg-white max-w-sm">
                         <div className="p-6 border-b  border-gray-300 text-gray-900 ">
@@ -55,12 +54,18 @@ export default function SheetsPage({ data }) {
                         </div>
                         <div className="py-3 px-6 border-t border-gray-300 text-gray-600 text-center">
                           <h5 className="text-gray-900 text-xl font-medium mb-2">Special Items</h5>
-                          <div>{item[9]}</div>
-                          <div>{item[10]}</div>
-                          <div>{item[11]}</div>
+                          <div className="">
+                            <ItemCardHover sheetData={itemData} itemName={item[9]}/>
+                          </div>
+                          <div className="">
+                            <ItemCardHover sheetData={itemData} itemName={item[10]}/>
+                          </div>
+                          <div className="">
+                            <ItemCardHover sheetData={itemData} itemName={item[11]}/>
+                          </div>
                         </div>
                       </div>
-                    </div> }
+                    </div> 
                   </div>
                        
                   ))
