@@ -17,7 +17,7 @@ export default function SheetsPage({ data }) {
       <section className='bg-cyan-100'>
           <div className='layout min-h-screen py-20 text-dark'>
             <Header pageTitle='Character Creation' nextPageText='Dice Rolls' nextPageURL='dice-rolls'/>
-            <ArrowLink direction='right' className='mt-2' href='/character-creation'>View Character Roles</ArrowLink>
+            <ArrowLink direction='right' className='mt-2' href='/character-roles'>View Character Roles</ArrowLink>
             <RulesContent data={data}/>
           </div>
         </section>
