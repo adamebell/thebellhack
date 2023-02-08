@@ -8,15 +8,13 @@ import RulesContent from '@/components/RulesContent';
 import Seo from '@/components/Seo';
 
 
-type Color = (typeof colorList)[number];
-
 export default function SheetsPage({ data }) {
   return (
     <Layout>
-      <Seo templateTitle='Intro' description='About the Bell Hack'/>
-        <section className='bg-dark'>
-          <div className='layout min-h-screen py-20 text-white'>
-            <Header nextPageText='Core Rules' nextPageURL='core-rules'/>
+      <Seo templateTitle='Development Log' description='Developing the Bell Hack'/>
+      <section className='bg-cyan-100'>
+          <div className='layout min-h-screen py-20 text-dark'>
+            <Header pageTitle='Development Log' nextPageText='Character Creation' nextPageURL='character-creation'/>
             <RulesContent data={data}/>
           </div>
         </section>
@@ -25,7 +23,7 @@ export default function SheetsPage({ data }) {
 }
 
 export async function getStaticProps(context) {
-  const sheet = await getSheetData("Intro");
+  const sheet = await getSheetData("Development");
   return {
     props: {
       data: sheet.slice(1, sheet.length), // remove sheet header

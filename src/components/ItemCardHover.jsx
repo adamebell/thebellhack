@@ -8,16 +8,16 @@ export default function ItemCardHover({
   return (
 
 
-    <ol className='mt-8 flex-rows w-3/4'>
+    <ol className='pt-2 flex-rows'>
     {sheetData && sheetData.length ? (
       sheetData.filter(row => row[1]==itemName).map(item => (
         <li key={item}>
-          <div className='object-center flex items-center justify-center'>
+          <div className='object-center grid items-center justify-center'>
             <div className='group relative inline-block'>
-              {item[1]}     
-                <div className="invisible group-hover:visible group-hover:block bg-white transition p-1 rounded absolute left-full top-1/2 ml-5 border">
+              <div className="p-1 text-center underline text-xl">{item[1]}</div>   
+                <div className="invisible w-96 h-96 group-hover:visible group-hover:block bg-white transition p-1 rounded absolute right-full top-1/2 ml-5 border-2 border-cyan-700">
                       <div className="text-gray-600">
-                        <h5 className="text-gray-900 text-xl font-medium text-center">{item[1]}</h5>
+                        <h3 className="text-gray-900 text-xl font-medium text-center">{item[1]}</h3>
                         <div>{item[5]}</div>
                       </div>
                 </div>

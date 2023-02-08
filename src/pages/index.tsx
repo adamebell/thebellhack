@@ -47,31 +47,22 @@ export default function HomePage() {
               <ButtonLink className='mt-6' href='/intro' variant='light'>
                 Intro
               </ButtonLink>
-              <ButtonLink className='mt-6' href='/core-rules' variant='light'>
-                Core Rules
-              </ButtonLink>
               <ButtonLink className='mt-6' href='/character-creation' variant='light'>
                 Character Creation
               </ButtonLink>
-              <ButtonLink className='mt-6' href='/setting' variant='light'>
-                Setting
+              <ButtonLink className='mt-6' href='/dice-rolls' variant='light'>
+                Dice Rolls
               </ButtonLink>
               <ButtonLink className='mt-6' href='/character-roles' variant='light'>
                 Character Roles
               </ButtonLink>
             </div>
             <div className=' flex flex-wrap gap-2'>
-              <ButtonLink className='mt-2' href='/initiative' variant='light'>
-                Initiative
+              <ButtonLink className='mt-2' href='/stats-health-defeat-recovery' variant='light'>
+                Stats, Health, Defeat, and Recovery
               </ButtonLink>
-              <ButtonLink className='mt-2' href='/gm-stuff' variant='light'>
-                GM Stuff
-              </ButtonLink>
-              <ButtonLink className='mt-2' href='/campaign-play' variant='light'>
-                Campaign Play
-              </ButtonLink>
-              <ButtonLink className='mt-2' href='/play-materials' variant='light'>
-                Play Materials
+              <ButtonLink className='mt-2' href='/turn-based-play' variant='light'>
+                Turn Based Play
               </ButtonLink>
             </div>
             <footer className='absolute bottom-2 text-white'>

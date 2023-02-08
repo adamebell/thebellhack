@@ -28,42 +28,46 @@ export default function SheetsPage({ data, itemData }) {
               </ArrowLink>
             </div>
 
-            <div className='mt-8 space-y-6 w-3/4 grid-flow-col'>
+            <div className='mt-8 space-y-6 grid-flow-col'>
               {data && data.length ? (
                 data.filter(row => row[0]==1).map((item) => (
                   <div key={item}>
-                    <div className="flex justify-center">
-                      <div className="block rounded-lg shadow-lg bg-white max-w-sm">
-                        <div className="p-6 border-b  border-gray-300 text-gray-900 ">
+                    <div className="justify-center">
+                      <div className="grid grid-rows-8 grid-cols-6 rounded-xl shadow-lg bg-white lg:w-2/3 max-w">
+                        <div className="role-name col-span-2 p-6  text-gray-900 ">
                           <h1 className="pt-3 pb-1 text-center">
                             {item[1]}
                           </h1>
-                          <p className="text-gray-700 text-sm px-3 mb-4">{item[2]}</p> 
+                          <p className="text-gray-700 text-sm px-3 mb-4 italic">{item[2]}</p> 
                         </div>
-                        <div className="p-6 border-b">
-                          <p className="text-gray-900 text-2xl font-medium mb-2 text-center">{item[3]}</p>
-                          <p className="text-gray-700">{item[4]}</p>
-                       </div>
-                        <div className="py-3 px-6 border-t border-gray-300 text-gray-600">
-                          <h5 className="text-gray-900 text-xl font-medium mb-2 text-center">{item[5]}</h5>
-                          <div>{item[6]}</div>
+                        <div className="role-stat p-6 border-l border-cyan-800 col-span-2">
+                            <p className="text-gray-700 text-xs text-center border-b mb-3">Special Stat & Benefit</p>
+                            <p className="text-gray-900 text-2xl font-medium mb-2 text-center">{item[3]}</p>
+                            <p className="text-gray-700">{item[4]}</p>
                         </div>
-                        <div className="py-3 px-6 border-t border-gray-300 text-gray-600">
-                          <h5 className="text-gray-900 text-xl font-medium mb-2 text-center">{item[7]}</h5>
-                          <div>{item[8]}</div>
-                        </div>
-                        <div className="py-3 px-6 border-t border-gray-300 text-gray-600 text-center">
-                          <h5 className="text-gray-900 text-xl font-medium mb-2">Special Items</h5>
-                          <div className="">
-                            <ItemCardHover sheetData={itemData} itemName={item[9]}/>
-                          </div>
-                          <div className="">
-                            <ItemCardHover sheetData={itemData} itemName={item[10]}/>
-                          </div>
-                          <div className="">
-                            <ItemCardHover sheetData={itemData} itemName={item[11]}/>
+                        <div className="role-items col-span-2 p-6 border-l  border-cyan-800 text-gray-600 text-center">
+                        <p className="text-gray-700 text-xs text-center border-b">Special Items</p>
+                          <div className=' '>
+                            <div className="">
+                              <ItemCardHover sheetData={itemData} itemName={item[9]}/>
+                            </div>
+                            <div className="">
+                              <ItemCardHover sheetData={itemData} itemName={item[10]}/>
+                            </div>
+                            <div className="">
+                              <ItemCardHover sheetData={itemData} itemName={item[11]}/>
+                            </div>
                           </div>
                         </div>
+                        <div className='col-span-6 py-3 border-t border-cyan-800 text-gray-700 text-xs text-center'>Special Abilities</div>
+                            <div className="p-6 border-r  border-cyan-700 text-gray-600 col-span-3">
+                            <h5 className="text-gray-900 text-xl font-medium text-center">{item[5]}</h5>
+                            <div>{item[6]}</div>
+                          </div>
+                          <div className="p-6  text-gray-600 col-span-3">
+                            <h5 className="text-gray-900 text-xl font-medium text-center">{item[7]}</h5>
+                            <div>{item[8]}</div>
+                          </div>
                       </div>
                     </div> 
                   </div>

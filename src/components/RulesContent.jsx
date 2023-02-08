@@ -6,15 +6,19 @@ export default function RulesContent({
   data,
 }) {
   return (
-    <>
+   
 
-  <ol className='mt-8 space-y-6 flex-rows w-3/4'>
+  <div className='mt-8 space-y-6 flex-rows w-3/4'>
     {data && data.length ? (
       data.map((item) => (
-        <li key={item}>
-          <p className={item[1]}>{item[0]}</p>
-          <div className='object-center flex items-center justify-center'>
-            { (item[4] > 0) &&
+        <div key={item}>
+          { (item[2] == 'div') && <div className={item[1]}>{item[0]}</div> }
+          { (item[2] == 'h1') && <h1 className={item[1]}>{item[0]}</h1> }
+          { (item[2] == 'h2') && <h2 className={item[1]}>{item[0]}</h2> }
+          { (item[2] == 'ul') && <ul className={item[1]}>{item[0]}</ul> }
+          { (item[2] == 'li') && <li className={item[1]}>{item[0]}</li> }
+          { (item[4] > 0) &&
+          <div className='object-center flex items-center justify-center'> 
             <NextImage
                             useSkeleton
                             className=''
@@ -23,16 +27,15 @@ export default function RulesContent({
                             height='0'
                             alt={item[3]}
             />
-            }
           </div>
-        </li>
+        }
+        </div>
                             
 
         ))
       ) : (
         <li>Error: do not forget to setup your env variables 👇</li>
       )}
-    </ol>
-    </>
+    </div>
   )
 }
