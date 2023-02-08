@@ -17,15 +17,15 @@ export default function RulesContent({
           { (item[2] == 'h2') && <h2 className={item[1]}>{item[0]}</h2> }
           { (item[2] == 'ul') && <ul className={item[1]}>{item[0]}</ul> }
           { (item[2] == 'li') && <li className={item[1]}>{item[0]}</li> }
-          { (item[4] > 0) &&
+          { (item[5] > 0) &&
           <div className='object-center flex items-center justify-center'> 
             <NextImage
                             useSkeleton
                             className=''
-                            src={item[2]}
-                            width={item[4]}
+                            src={item[3]}
+                            width={item[5]}
                             height='0'
-                            alt={item[3]}
+                            alt={item[4]}
             />
           </div>
         }
