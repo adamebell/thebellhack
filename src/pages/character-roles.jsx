@@ -23,8 +23,8 @@ export default function SheetsPage({ data, itemData }) {
               <ArrowLink direction='left' className='mt-2' href='/'>
                 Back to Home
               </ArrowLink>
-              <ArrowLink direction='right' className='mt-2' href='/'>
-                Core Rules
+              <ArrowLink direction='right' className='mt-2' href='/character-creation'>
+                Character Creation Rules
               </ArrowLink>
             </div>
 
